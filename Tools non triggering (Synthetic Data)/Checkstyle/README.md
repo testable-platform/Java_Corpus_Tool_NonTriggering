@@ -11,6 +11,6 @@ Nothing to report on it: Checkstyle cannot start without a configuration file an
   rule sets: Javadoc on every type and method, one top-level class per
   file, no magic number, no long line.
 
-Contents: one minimal program per boundary family (node12, node14, node20, node24, node26). One class or one function, no branching, no duplication, no dependency, no dead export, no magic number. No manifest and no tool configuration, so nothing here is discovered as a project.
+Contents: one minimal program per boundary family (java9). One class or one function, no branching, no duplication, no dependency, no dead export, no magic number. No manifest and no tool configuration, so nothing here is discovered as a project.
 
 Expected: the tool runs and reports nothing.
