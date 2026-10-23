@@ -10,6 +10,6 @@ Nothing to report on it: It is a compiler plugin, not a standalone tool: it runs
   that does not happen here. Its subject is nullable dereferences, and
   nothing in this code is ever null.
 
-Contents: one minimal program per boundary family (node12, node14, node20, node24, node26). One class or one function, no branching, no duplication, no dependency, no dead export, no magic number. No manifest and no tool configuration, so nothing here is discovered as a project.
+Contents: one minimal program per boundary family (java24). One class or one function, no branching, no duplication, no dependency, no dead export, no magic number. No manifest and no tool configuration, so nothing here is discovered as a project.
 
 Expected: the tool runs and reports nothing.
