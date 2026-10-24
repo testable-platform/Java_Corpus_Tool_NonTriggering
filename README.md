@@ -1,58 +1,35 @@
-# Java Tool-Evaluation Corpus
+# Java Corpus -- Tools non triggering (Synthetic Data)
 
 `main` carries only this overview -- it holds no project code. Every other
-branch in this repository is a complete, independently buildable project for
-one exact combination of Java version, build system (`Maven`/`Ant + Ivy`/`Gradle Groovy DSL`/`Gradle Kotlin DSL`), packaging (`Thin jar`/`WAR`/`Shaded uber-jar`) and architecture (`Monolith`/`Microservices`).
+branch in this repository is one cell of `testable-platform/java-corpus`, split out to carry
+only the `Tools non triggering (Synthetic Data)/` folder (plus that branch's own build scaffolding).
 
-This repository consolidates what used to be 90 separate small repositories
-into one repository holding all 432 branches, so the full corpus for this
-language lives in a single place.
+This repository was produced by splitting `testable-platform/java-corpus` by task folder.
+`testable-platform/java-corpus` itself was not modified by this split and still holds the
+full combined corpus.
+
+## Scope
+
+This repo covers the 5 boundary Java families (java9) across the full build-system x packaging x architecture combination (10 branches total). Each branch carries only its own family's data inside `Tools non triggering (Synthetic Data)/` -- not all 18 (or even all 5 boundary) families bundled together.
 
 ## Branch naming
 
-Every branch name encodes its own identity, so the name alone tells you what
-it is without needing to open it:
+Branch names are unchanged from `testable-platform/java-corpus`:
 
 ```
-JV_V{ver}_{BUNDLER}_{PKGMGR}_{ARCH}
+JV_V{version}_{BUILD_SYSTEM}_{PACKAGING}_{ARCHITECTURE}
 ```
-
-## Versions in this corpus
-
-18 Java versions, 24 branches each (one per bundler x package manager x
-architecture combination):
-
-| Java version | Branches |
-|---|---|
-| 8 | 24 |
-| 9 | 24 |
-| 10 | 24 |
-| 11 | 24 |
-| 12 | 24 |
-| 13 | 24 |
-| 14 | 24 |
-| 15 | 24 |
-| 16 | 24 |
-| 17 | 24 |
-| 18 | 24 |
-| 19 | 24 |
-| 20 | 24 |
-| 21 | 24 |
-| 22 | 24 |
-| 23 | 24 |
-| 24 | 24 |
-| 25 | 24 |
 
 ## Finding a branch
 
-Each branch's own `README.md` describes its exact cell (version, bundler,
-package manager, architecture) and its full tool roster. `dataset.json` on
-each branch is the machine-readable answer key for that cell.
+Each branch's own `README.md` describes its exact cell (Java version, build
+system, packaging, architecture) and its tool roster, trimmed to the parts
+relevant to `Tools non triggering (Synthetic Data)/`. `dataset.json` on each branch is the
+machine-readable answer key for that cell (unmodified by this split -- it
+still describes the branch's original full 19-tool/5-folder state).
 
 ## History
 
-Branches were moved into this repository by relocating their existing git
-history under a new name -- every commit, author, date and
-`Co-authored-by:` trailer is unchanged from before consolidation. Nothing
-was squashed or rewritten, so tools that read commit history (churn,
-ownership, `pydriller`, etc.) see the same signal they always did.
+Each branch's commit history is carried over unchanged from `testable-platform/java-corpus`,
+with one additional commit on top that removes the folders not relevant to
+this repo. Nothing was squashed or rewritten.
